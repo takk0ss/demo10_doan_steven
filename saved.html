@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -47,30 +46,28 @@
     <!-- our own navbar goes here -->
     <nav id="navbarPlaceholder"></nav>
 
+    <!-- the body of your page goes here -->
     <div class="container">
-        <h1>User Profile </h1>
-        <form>
-            <fieldset class="mb-3" id="personalInfoFields" disabled>
-                <div class="form-group">
-                    <label >Name</label>
-                    <input type="text" id="nameInput" class="form-control" placeholder="Enter your name">
-                </div>
-                <div class="form-group">
-                    <label >School</label>
-                    <input type="text" id="schoolInput" class="form-control" placeholder="Enter your school">
-                </div>
-                <div class="form-group">
-                    <label >City</label>
-                    <input type="text" id="cityInput" class="form-control" placeholder="Enter your city">
-                </div>
-            </fieldset>
-            <div class="d-flex justify-content-end mt-5">
-                <button type="button" class="btn btn-secondary" onclick="editUserInfo()">Edit</button>
-                <span style="width: 10px"></span>
-                <button type="button" class="btn btn-info" onclick="saveUserInfo()">Save</button>
+        <h1>Saved Hikes for <span id=name-goes-here></span></h1>
+        <!-- Here is container for cards  -->
+        <div class="container">
+            <div id="hikeCardGroup" class="row row-cols-auto">
             </div>
-        </form>
+        </div>
 </div>
+
+<!-- Templates for general use, not displayed -->
+<template id="savedCardTemplate">
+        <div class="card py-2 mx-2 bg-light" style="width: 10rem;">
+            <img class="card-image card-img-top" src=" ..." alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-length">placeholder</p>
+                <br>
+                <a class="btn btn-secondary card-href" id="read-more">Read more ...</a>
+            </div>
+        </div>
+ </template>
     <!-- stuff -->
 
     <!-- our own footer goes here-->
@@ -81,7 +78,7 @@
     <!---------------------------------------------->
     <script src="./scripts/firebaseAPI_TEAM99.js"></script>
     <script src="./scripts/skeleton.js"></script>
-    <script src="/scripts/profile.js"></script>
+    <script src="./scripts/saved.js"></script>
     <!-- <script src="./scripts/script.js"></script> -->
 
 </body>
